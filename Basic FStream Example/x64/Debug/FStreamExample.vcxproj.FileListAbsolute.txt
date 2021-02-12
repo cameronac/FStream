@@ -1,0 +1,4 @@
+C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\x64\Debug\FStreamExample.exe
+C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\x64\Debug\FStreamExample.pdb
+C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\Basic FStream Example\x64\Debug\FStreamExample.exe
+C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\Basic FStream Example\x64\Debug\FStreamExample.pdb
