@@ -4,10 +4,17 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cctype>
+
+//Global Variables
+int spaces = 0;
+int punctuation = 0;
 
 //Function Headers
 void ProcessFile(std::ifstream* file);
 void ProcessLine(std::string line);
+inline void CheckForSpace(char ch);
+inline void CheckForPunctuation(char ch);
 
 
 int main()
@@ -42,9 +49,35 @@ void ProcessFile(std::ifstream* file) {
 	else {
 		std::cout << "Unable to open file!" << std::endl;
 	}
+
+	std::cout << "Spaces: " << spaces << std::endl;
+	std::cout << "Punctuation: " << punctuation << std::endl;
+
+
 }
 
 //Records Information about the line given
 void ProcessLine(std::string line) {
+
+	//Search For Spaces and Punctuation
+	for (int i = 0; i < line.length(); i++) {
+		CheckForSpace(line[i]);
+		CheckForPunctuation(line[i]);
+	}
+}
+
+
+inline void CheckForSpace(char ch) {
+	
+	if (ch == ' ') {
+		spaces += 1;
+	}
+}
+
+inline void CheckForPunctuation(char ch) {
+
+	if (ch == '.' || ch == '!' || ch == '?') {
+		punctuation += 1;
+	}
 
 }
