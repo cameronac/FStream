@@ -9,13 +9,15 @@
 //Global Variables
 int spaces = 0;
 int punctuation = 0;
+int capital_letters = 0;
 
 //Function Headers
 void ProcessFile(std::ifstream* file);
 void ProcessLine(std::string line);
-inline void CheckForSpace(char ch);
-inline void CheckForPunctuation(char ch);
 
+inline bool CheckForSpace(char ch);
+inline bool CheckForPunctuation(char ch);
+inline bool CheckForCapitalLetters(char ch);
 
 int main()
 {
@@ -52,8 +54,7 @@ void ProcessFile(std::ifstream* file) {
 
 	std::cout << "Spaces: " << spaces << std::endl;
 	std::cout << "Punctuation: " << punctuation << std::endl;
-
-
+	std::cout << "Capital Letters: " << capital_letters << std::endl;
 }
 
 //Records Information about the line given
@@ -61,23 +62,41 @@ void ProcessLine(std::string line) {
 
 	//Search For Spaces and Punctuation
 	for (int i = 0; i < line.length(); i++) {
-		CheckForSpace(line[i]);
-		CheckForPunctuation(line[i]);
+		
+		if (CheckForSpace(line[i])) { continue;  }
+		if (CheckForPunctuation(line[i])) { continue;  }
+		if (CheckForCapitalLetters(line[i])) { continue; }
 	}
 }
 
 
-inline void CheckForSpace(char ch) {
+inline bool CheckForSpace(char ch) {
 	
-	if (ch == ' ') {
+	if (std::isspace(ch)) {
 		spaces += 1;
+		return true;
 	}
+
+	return false;
 }
 
-inline void CheckForPunctuation(char ch) {
+inline bool CheckForPunctuation(char ch) {
 
-	if (ch == '.' || ch == '!' || ch == '?') {
+	if (std::ispunct(ch)) {
 		punctuation += 1;
+		return true;
 	}
 
+	return false;
+}
+
+inline bool CheckForCapitalLetters(char ch) {
+
+	if (std::isupper(ch)) {
+	
+		capital_letters += 1;
+		return true;
+	}
+
+	return false;
 }
