@@ -5,29 +5,46 @@
 #include <fstream>
 #include <string>
 
+//Function Headers
+void ProcessFile(std::ifstream* file);
+void ProcessLine(std::string line);
+
+
 int main()
 {
 	//Variables
 	std::string directory = "100west.txt";
-	std::string line = "";
 
 	//Input File
 	std::ifstream myFile;
 	myFile.open(directory);
 
+	ProcessFile(&myFile);
+
+	myFile.close();
+}
+
+//Looks Through File Line by Line
+void ProcessFile(std::ifstream* file) {
+
+	std::string line = "";
+
 	//Getting File Text
-	if (myFile.is_open()) {
+	if (file->is_open()) {
 
 		//File Loop
-		while (std::getline(myFile, line)) {
+		while (std::getline(*file, line)) {
 
 			//Process Line
-			
+			ProcessLine(line);
 		}
 	}
 	else {
 		std::cout << "Unable to open file!" << std::endl;
 	}
+}
 
-	myFile.close();
+//Records Information about the line given
+void ProcessLine(std::string line) {
+
 }
