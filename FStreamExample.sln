@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntermediateFileReading", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FStreamExample", "BasicFileInputOutput\FStreamExample.vcxproj", "{7076D9F9-2305-4F42-824C-ED4BD6F963B9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReadAndWriteMathExpressions", "ReadAndWriteMathExpressions\ReadAndWriteMathExpressions.vcxproj", "{6441783C-791F-4EC4-AA81-E994C5C0C465}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathExpressionGenerator", "MathExpressionGenerator\MathExpressionGenerator.vcxproj", "{6441783C-791F-4EC4-AA81-E994C5C0C465}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

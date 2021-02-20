@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (ReadAndWriteMathExpressions.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  MathExpressionGenerator.cpp
+C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\MathExpressionGenerator\MathExpressionGenerator.cpp(75,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  MathExpressionGenerator.vcxproj -> C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\x64\Debug\MathExpressionGenerator.exe

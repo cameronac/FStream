@@ -13,7 +13,7 @@ class MathExpressionGenerator {
 private:
     int* left_value = nullptr;
     int* right_value = nullptr;
-    bool sign = false;
+    bool* sign = nullptr;
     
 
 public:
@@ -24,18 +24,19 @@ public:
         left_value = new int[number_of_expressions];
         right_value = new int[number_of_expressions];
         this->number_of_expressions = number_of_expressions;
-        sign = false;
+        sign = new bool[number_of_expressions];
     }
 
     //Destructor
     ~MathExpressionGenerator() {
         delete[]left_value;
         delete[]right_value;
+        delete[]sign;
     }
 
     std::string GetExpression(int index) {
          
-        if (sign) {
+        if (sign[index]) {
             int result = left_value[index] + right_value[index];
             return std::to_string(left_value[index]) + " " + "+" + " " + std::to_string(right_value[index]) + " = " + std::to_string(result);
 
@@ -47,23 +48,23 @@ public:
     }
 
     void GenerateExpressions() {
-        GenerateSign();
-
+        
         for (int i = 0; i < number_of_expressions; i++) {
+            GenerateSign(i);
             GenerateValues(i);
         }
     }
 
 private:
     
-    void GenerateSign() {
-        sign = rand() % 2;
+    void GenerateSign(int i) {
+        sign[i] = rand() % 2;
     }
 
     void GenerateValues(int i) {
 
-        left_value[i] = rand() % 223; //% number_of_digits;
-        right_value[i] = rand() % 223; //% number_of_digits;
+        left_value[i] = rand() % 223;
+        right_value[i] = rand() % 223; 
     }
 };
 
