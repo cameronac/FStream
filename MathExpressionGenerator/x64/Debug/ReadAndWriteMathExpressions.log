@@ -1,0 +1,3 @@
+﻿  ReadAndWriteMathExpressions.cpp
+C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\ReadAndWriteMathExpressions\ReadAndWriteMathExpressions.cpp(74,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  ReadAndWriteMathExpressions.vcxproj -> C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\x64\Debug\ReadAndWriteMathExpressions.exe

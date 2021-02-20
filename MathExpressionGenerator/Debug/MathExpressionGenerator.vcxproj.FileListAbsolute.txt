@@ -1,0 +1,2 @@
+C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\ReadAndWriteMathExpressions\Debug\MathExpressionGenerator.exe
+C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\ReadAndWriteMathExpressions\Debug\MathExpressionGenerator.pdb

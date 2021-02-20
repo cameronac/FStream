@@ -1,0 +1,3 @@
+﻿  MathExpressionGenerator.cpp
+C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\ReadAndWriteMathExpressions\MathExpressionGenerator.cpp(74,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  MathExpressionGenerator.vcxproj -> C:\Users\Cameron Collins\Desktop\C++\Examples\FStream\ReadAndWriteMathExpressions\Debug\MathExpressionGenerator.exe
